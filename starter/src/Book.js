@@ -1,4 +1,14 @@
-const Book = ({ book }) => {
+import BookShelfOptions from "./BookShelfOptions";
+import * as BooksAPI from "./BooksAPI.js";
+const Book = ({ book, updateBook }) => {
+  const changeShelf = (value) => {
+    const update = () => {
+      book.shelf = value;
+      updateBook(book);
+      BooksAPI.update(book, { shelf: value });
+    };
+    update();
+  };
   return (
     <li key={book.id}>
       <div className="book">
@@ -8,20 +18,13 @@ const Book = ({ book }) => {
             style={{
               width: 128,
               height: 193,
-              backgroundImage: `url(${book.img_url})`,
+              backgroundImage: `url(${book.imageLinks.thumbnail})`,
             }}
           ></div>
-          <div className="book-shelf-changer">
-            <select>
-              <option value="none" disabled>
-                Move to...
-              </option>
-              <option value="currentlyReading">Currently Reading</option>
-              <option value="wantToRead">Want to Read</option>
-              <option value="read">Read</option>
-              <option value="none">None</option>
-            </select>
-          </div>
+          <BookShelfOptions
+            changeShelf={changeShelf}
+            currentShelf={book.shelf}
+          ></BookShelfOptions>
         </div>
         <div className="book-title">{book.title}</div>
         <div className="book-authors">{book.author}</div>
