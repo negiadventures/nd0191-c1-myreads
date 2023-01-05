@@ -5,7 +5,7 @@ const Book = ({ book, updateBook }) => {
     const update = () => {
       book.shelf = value;
       updateBook(book);
-      BooksAPI.update(book, { shelf: value });
+      BooksAPI.update(book, value);
     };
     update();
   };

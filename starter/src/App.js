@@ -44,7 +44,13 @@ function App() {
             ></MyReads>
           }
         />
-        <Route exact path="/search" element={<SearchPage></SearchPage>} />
+        <Route
+          exact
+          path="/search"
+          element={
+            <SearchPage books={books} updateBooks={updateBooks}></SearchPage>
+          }
+        />
       </Routes>
     </div>
   );
