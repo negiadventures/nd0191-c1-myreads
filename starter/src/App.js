@@ -4,6 +4,7 @@ import SearchPage from "./SearchPage";
 import MyReads from "./MyReads";
 import { useState, useEffect } from "react";
 import * as BooksAPI from "./BooksAPI.js";
+import BookDetail from "./BookDetail";
 function App() {
   const shelves = [
     {
@@ -50,6 +51,10 @@ function App() {
           element={
             <SearchPage books={books} updateBooks={updateBooks}></SearchPage>
           }
+        />
+        <Route
+          path="/book/:id"
+          element={<BookDetail books={books}></BookDetail>}
         />
       </Routes>
     </div>

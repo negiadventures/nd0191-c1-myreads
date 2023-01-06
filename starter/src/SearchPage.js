@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Book from "./Book";
 import { useState } from "react";
 import * as BooksAPI from "./BooksAPI";
+import PropTypes from "prop-types";
 
 const SearchPage = ({ books, updateBooks }) => {
   const [newBooks, setNewBooks] = useState([]);
@@ -64,4 +65,9 @@ const SearchPage = ({ books, updateBooks }) => {
     </div>
   );
 };
+SearchPage.propTypes = {
+  books: PropTypes.array.isRequired,
+  updateBooks: PropTypes.func.isRequired,
+};
+
 export default SearchPage;

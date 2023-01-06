@@ -175,3 +175,46 @@ body,
   text-align: center;
   font-size: 0.8em;
 }
+
+.left {
+  margin-left: 5%;
+  margin-top: 5%;
+  float: left;
+  position: relative;
+  width: 20%;
+}
+.right {
+  margin-left: 2%;
+  margin-top: 5%;
+  float: left;
+  position: relative;
+  width: 68%;
+}
+
+.list-book-title {
+  padding: 10px 0;
+  background: #2e7c31;
+  text-align: center;
+  position: relative;
+}
+.list-book-title h1 {
+  font-weight: 400;
+  margin: 0;
+  color: white;
+}
+
+.close-book {
+  float: left;
+  position: relative;
+  display: block;
+  top: 0px;
+  left: 15px;
+  width: 50px;
+  height: 53px;
+  background: white;
+  background-image: url("./icons/arrow-back.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  font-size: 0;
+}

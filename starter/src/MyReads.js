@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Shelf from "./Shelf";
+import PropTypes from "prop-types";
 const MyReads = ({ shelves, books, updateBooks }) => {
   const updateBook = (book) => {
     updateBooks(book);
@@ -29,4 +30,11 @@ const MyReads = ({ shelves, books, updateBooks }) => {
     </div>
   );
 };
+
+MyReads.propTypes = {
+  selves: PropTypes.array.isRequired,
+  books: PropTypes.array.isRequired,
+  updateBooks: PropTypes.func.isRequired,
+};
+
 export default MyReads;

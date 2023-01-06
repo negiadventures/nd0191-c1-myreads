@@ -92,3 +92,27 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## UPDATE - Anirudh Negi
+
+## Install Dependencies
+
+```sh
+npm install --save prop-types
+```
+
+```sh
+npm install --save react-router-dom
+```
+
+## Install and Start project
+
+```sh
+npm install
+```
+
+```sh
+npm start
+```
+
+## Next, Open project on browser at localhost:3000
